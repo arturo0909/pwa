@@ -9,7 +9,7 @@ function App() {
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const response = await axios.get("https://exciting-miracle-production.up.railway.app/");
+    const response = await axios.get("https://pwa-production-7c8b.up.railway.app");
     setData(response.data);
   }
 
@@ -43,6 +43,7 @@ function App() {
     <div>
       {data.map((datas, index)=>(
         <div>
+          <p style={{backgroundColor: 'black', color: 'white'}}>Hola</p>
           <p key={index} style={{backgroundColor: 'black', color: 'white'}}>{datas.text_answer}</p>
           <p key={index} style={{backgroundColor: 'white', color: 'black'}}>{datas.text_answer}</p>
         </div>
