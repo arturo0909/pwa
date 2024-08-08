@@ -5,7 +5,7 @@ import db from "./db.js";
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:5173', "https://exciting-miracle-production.up.railway.app/"],
+    origin: "https://exciting-miracle-production.up.railway.app",
     credentials: true
   }));
 app.get("/", async(req, res) => {
