@@ -1,10 +1,10 @@
 import mysql from "mysql2/promise";
 
 const db = mysql.createPool({
-  host: "localhost",
+  host: "mysql.railway.internal",
   user: "root",
-  database: "cdi",
-  password: "arturo09",
+  database: "railway",
+  password: "obAGhUdmDsLctHPpQLbGEZyfoaPSmJFR",
 });
 
 export default db;
