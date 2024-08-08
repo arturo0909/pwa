@@ -6,16 +6,7 @@ import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [data, setData] = useState([])
-
-  const getData = async () => {
-    const response = await axios.get("https://pwa-production-7c8b.up.railway.app");
-    setData(response.data);
-  }
-
-  useEffect(() => {
-    getData();
-  }, [])
+ 
 
   return (
     // <>
@@ -40,14 +31,11 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-    <div>
-      {data.map((datas, index)=>(
+ 
         <div>
-          <p key={index} style={{backgroundColor: 'black', color: 'white'}}>{datas.text_answer}</p>
-          <p key={index} style={{backgroundColor: 'white', color: 'black'}}>{datas.text_answer}</p>
+          <p key={index} style={{backgroundColor: 'black', color: 'white'}}>chr</p>
         </div>
-      ))}
-    </div>
+
   )
 }
 
