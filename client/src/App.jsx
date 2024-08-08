@@ -9,7 +9,7 @@ function App() {
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const response = await axios.get("http://localhost:3000");
+    const response = await axios.get("https://exciting-miracle-production.up.railway.app/");
     setData(response.data);
   }
 
