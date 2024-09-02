@@ -1,11 +1,13 @@
+import dotenv from 'dotenv/config';
 import express from "express";
 import cors from 'cors';
 import db from "./db.js";
 
+const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: "https://exciting-miracle-production.up.railway.app",
+    origin: process.env.CORS_FRONTEND,
     credentials: true
   }));
 app.get("/", async(req, res) => {
@@ -20,6 +22,6 @@ app.get("/", async(req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server escuchando en el puerto 3000");
+app.listen(PORT, () => {
+  console.log(`Server escuchando en el puerto ${PORT}`);
 });
